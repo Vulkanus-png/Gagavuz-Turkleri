@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Gagavuz Türkleri</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* BODY */
+body{
+    font-family:'Merriweather', serif;
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:white;
+}
+
+/* CONTAINER */
+.content{
+    width:90%;
+    max-width:1200px;
+    margin:100px auto 80px auto;
+}
+
+/* BAŞLIK */
+.main-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.main-title h1{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.main-title p{
+    font-size:18px;
+    opacity:0.9;
+}
+
+/* ÖZET */
+.summary{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+    padding:50px;
+    border-radius:18px;
+    margin-bottom:70px;
+    line-height:1.9;
+}
+
+.summary h2{
+    text-align:center;
+    margin-bottom:25px;
+    font-size:26px;
+}
+
+.summary p{
+    margin-bottom:20px;
+    text-align:justify;
+}
+
+/* KART GRID */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(4,1fr); /* 4 SABİT */
+    gap:30px;
+}
+
+/* KART */
+.card{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+    padding:30px;
+    border-radius:18px;
+    text-align:center;
+    transition:0.3s;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+
+    height:220px;
+}
+
+.card:hover{
+    transform:translateY(-4px);
+}
+
+.card h3{
+    margin-bottom:12px;
+}
+
+.card p{
+    margin-bottom:18px;
+    min-height:40px;
+}
+
+/* BUTON */
+.card button{
+    padding:8px 22px;
+    border:none;
+    border-radius:20px;
+    background:#00aaff;
+    color:white;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.card button:hover{
+    background:#0077aa;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px){
+    .cards{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media (max-width: 500px){
+    .cards{
+        grid-template-columns:1fr;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="content">
+
+    <!-- BAŞLIK -->
+    <div class="main-title">
+        <h1>Gagavuz Türkleri</h1>
+        <p>Tarih, Kültür ve Coğrafi Yapı Üzerine Akademik Bir İnceleme</p>
+    </div>
+
+    <!-- ÖZET -->
+    <div class="summary">
+        <h2>Araştırmanın Amacı ve Kapsamı</h2>
+
+        <p>
+            Bu çalışmada bir Balkan ülkesi olan Moldova’da yaşayan Gagavuz Türklerinin tarihini ve kültürel ögelerini araştırdık. Orta Asya’dan Balkanlara göç eden Türk topluluklarından Gagavuz Türklerinin yerleştikleri bölgelerde yaşadıkları kültürel değişimi ve yerel kültüre etkilerini araştırmak, Gagavuz kültürü ile Anadolu Türk kültürünün ortak yönlerini ortaya çıkarmak çalışmamızın temel amacı oldu. Çalışmamız sırasında alan yazın taraması ve mülakat yöntemlerinden yararlanılmıştır. Çalışmamızda resmi ve sivil kurum yetkilileri ile görüşmeler yapılarak nitel veriler elde edilmiş, olgu bilim araştırma deseni kullanılmıştır.        </p>
+
+        <p>
+            Gagavuzlar Moldova’nın Bucak bölgesinde “Gagauzya” adıyla özerk bir Türk devleti olarak yaşamaya devam etmektedirler. Bugün farklı ülkelerde yaşayan Gagavuzların sayısının 300.000’e yakın olduğu tahmin edilmektedir. Gagavuzlarda yeni yılın kutlandığı “Colindat Erkek Grubu ve Noel Ritüeli”, UNESCO Somut Olmayan Kültürel Miras Listesinde yer almıştır. UNESCO Kültürel Miras Listesinde Romanya devletine kayıtlı “Geleneksel Duvar Halısı İşçiliği” ve “1 Mart Martenita Bayramı” Moldova’da ve Gagavuz Yeri’nde de yaşatılan kültürel unsurlardır. Gagavuz kültüründeki ilkyaz yortusu ile Anadolu kültüründeki nevruz, hederlez ile hıdrellez, colindat ile kalandar, m’ edji ile imece gelenekleri, horu ile hora halk oyunu, el sanatları, mizah anlayışı, çocuk oyunları, mutfak ve kıyafet kültürü benzer özellikler taşımaktadır. UNESCO Kültürel Miras Listesi’ne kayıt amacıyla Gagavuz Yeri Özerk Bölgesi(Moldova) için “Nasreddin Hoca deyişleri, Horu-milli dansı, Hederlez bayramı, M’edji ve Fıçıcılık zanaatı” teklif edilmiştir. Gagavuz Türkçesi, UNESCO’nun belirlediği “Tehlikedeki Dünya Dilleri” arasında yer almaktadır. Gagavuzların yaşadıkları bölgelerdeki çok uluslu yapının etkisiyle kültürel değişimlere uğramış bir halk olmakla birlikte geleneksel değerlerini ve geleneklerini koruyabilmiş olduklarını, Anadolu Türk kültürüyle ortak özellikler taşıdıklarını görmekteyiz.
+	"</p>
+
+        <p>
+            Anahtar kelimeler: Kültür, somut olmayan kültürel miras, Gagavuz, Gagavuz Yeri        </p>
+
+    </div>
+
+    <!-- KARTLAR -->
+    <div class="cards">
+
+        <div class="card">
+            <div>
+                <h3>Tarih</h3>
+                <p>Gagavuz Türklerinin kökeni ve tarihsel gelişimi.</p>
+            </div>
+            <a href="tarih.html">
+                <button>Devamını Oku</button>
+            </a>
+        </div>
+
+        <div class="card">
+            <div>
+                <h3>Coğrafya</h3>
+                <p>Gagavuzya’nın konumu ve demografik yapısı.</p>
+            </div>
+            <a href="cografya.html">
+                <button>Devamını Oku</button>
+            </a>
+        </div>
+
+        <div class="card">
+            <div>
+                <h3>Kültürel Karşılaştırma</h3>
+                <p>Gagavuz ve Anadolu kültürünün karşılaştırılması.</p>
+            </div>
+            <a href="kulturel_karsilastirma.html">
+                <button>Devamını Oku</button>
+            </a>
+        </div>
+
+        <div class="card">
+            <div>
+                <h3>Galeri</h3>
+                <p>Haritalar ve kültürel görseller.</p>
+            </div>
+            <a href="galeri.html">
+                <button>Galeriyi Gör</button>
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

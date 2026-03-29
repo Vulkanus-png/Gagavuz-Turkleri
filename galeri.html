@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Gagavuz Türkleri - Galeri</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* BODY */
+body{
+    font-family:'Merriweather', serif;
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:white;
+}
+
+/* ANA CONTAINER */
+.content{
+    width:90%;
+    max-width:1100px;
+    margin:100px auto 80px auto;
+}
+
+/* BAŞLIK */
+.page-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.page-title h1{
+    font-size:40px;
+}
+
+/* GALERİ GRID */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:25px;
+}
+
+/* KARE FOTOĞRAFLAR */
+.gallery img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    border-radius:14px;
+    cursor:pointer;
+    transition:0.3s ease;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+/* MODAL */
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.9);
+    justify-content:center;
+    align-items:center;
+    z-index:1000;
+}
+
+.modal img{
+    max-width:85%;
+    max-height:85%;
+    border-radius:16px;
+}
+
+/* ALT NAV */
+.nav-cards{
+    margin-top:80px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:30px;
+}
+
+.nav-card{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+    padding:35px;
+    border-radius:18px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.nav-card:hover{
+    transform:translateY(-6px);
+}
+
+.nav-card h4{
+    margin-bottom:15px;
+}
+
+.nav-card p{
+    margin-bottom:20px;
+}
+
+.nav-card button{
+    padding:8px 22px;
+    border:none;
+    border-radius:20px;
+    background:#00aaff;
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.nav-card button:hover{
+    background:#0077aa;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="content">
+
+    <div class="page-title">
+        <h1>Galeri</h1>
+    </div>
+
+    <!-- FOTOĞRAFLAR -->
+    <div class="gallery">
+    <img src="images/Resim11.png" onclick="openModal(this.src)">
+    <img src="images/Resim12.png" onclick="openModal(this.src)">
+    <img src="images/Resim13.png" onclick="openModal(this.src)">
+    <img src="images/Resim14.png" onclick="openModal(this.src)">
+    <img src="images/Resim1.png" onclick="openModal(this.src)">
+    <img src="images/Resim5.png" onclick="openModal(this.src)">
+    <img src="images/Resim6.png" onclick="openModal(this.src)">
+    <img src="images/Resim7.png" onclick="openModal(this.src)">
+    <img src="images/Resim8.png" onclick="openModal(this.src)">
+    <img src="images/Resim9.png" onclick="openModal(this.src)">
+    <img src="images/Resim10.png" onclick="openModal(this.src)">
+    <img src="images/Resim15.png" onclick="openModal(this.src)">
+    <img src="images/Resim17.png" onclick="openModal(this.src)">
+    <img src="images/Resim18.png" onclick="openModal(this.src)">
+    <img src="images/gagauzya-map.jpg" onclick="openModal(this.src)">
+
+    </div>
+
+    <!-- MODAL -->
+    <div id="myModal" class="modal" onclick="closeModal()">
+        <img id="modalImg">
+    </div>
+
+    <!-- ALT GEÇİŞ -->
+    <div class="nav-cards">
+
+        <div class="nav-card">
+            <h4>Tarih</h4>
+            <p>Gagavuz Türklerinin tarihsel gelişimi.</p>
+            <a href="tarih.html">
+                <button>Devamını Oku</button>
+            </a>
+        </div>
+
+        <div class="nav-card">
+            <h4>Coğrafya</h4>
+            <p>Bölgenin konumu ve haritalar.</p>
+            <a href="cografya.html">
+                <button>Devamını Oku</button>
+            </a>
+        </div>
+
+        <div class="nav-card">
+            <h3>Kültür</h4>
+            <p>Dil, gelenekler ve kültürel özellikler.</p>
+            <a href="kulturel_karsilastirma.html">
+                <button>Devamını Oku</button>
+            </a>
+        </div>
+
+        <div class="nav-card">
+            <h4>Ana Sayfa</h4>
+            <p>Proje özetine geri dön.</p>
+            <a href="index.html">
+                <button>Devamını Oku</button>
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+function openModal(src){
+    const modal = document.getElementById("myModal");
+    const img = document.getElementById("modalImg");
+    modal.style.display = "flex";
+    img.src = src;
+}
+
+function closeModal(){
+    document.getElementById("myModal").style.display = "none";
+}
+</script>
+
+</body>
+</html>

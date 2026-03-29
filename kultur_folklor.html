@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Folklor ve Geleneksel Oyunlar</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+    font-family:'Merriweather', serif;
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:white;
+}
+
+.content{
+    width:90%;
+    max-width:1100px;
+    margin:100px auto;
+}
+
+.page-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.page-title h1{
+    font-size:40px;
+}
+
+/* ÜST MENÜ */
+.top-cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    margin-bottom:50px;
+}
+
+/* KART */
+.card{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(8px);
+    padding:30px;
+    border-radius:18px;
+    text-align:center;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    height:200px;
+
+    position:relative;
+    z-index:1;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-4px);
+    z-index:10;
+}
+
+.card h3{margin-bottom:10px;}
+.card p{margin-bottom:15px;}
+
+.card button{
+    padding:8px 18px;
+    border:none;
+    border-radius:20px;
+    background:#00aaff;
+    color:white;
+    cursor:pointer;
+}
+
+.card button:hover{
+    background:#0077aa;
+}
+
+.active{
+    border:2px solid #00aaff;
+}
+
+/* METİN */
+.glass-box{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+    padding:55px;
+    border-radius:20px;
+    line-height:1.9;
+    margin-bottom:40px;
+}
+
+.glass-box h3{
+    margin-top:25px;
+    margin-bottom:10px;
+    color:#00aaff;
+    border-left:3px solid #00aaff;
+    padding-left:10px;
+}
+
+.glass-box p{
+    margin-bottom:18px;
+    text-align:justify;
+}
+
+/* GALERİ */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:15px;
+    margin-top:20px;
+}
+
+.gallery img{
+    width:100%;
+    height:140px;
+    object-fit:cover;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+/* MODAL */
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.9);
+    justify-content:center;
+    align-items:center;
+    z-index:999;
+}
+
+.modal img{
+    max-width:85%;
+    max-height:85%;
+    border-radius:12px;
+}
+
+/* ALT */
+.bottom-cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:25px;
+    margin-top:50px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="content">
+
+<div class="page-title">
+    <h1>Folklor ve Geleneksel Oyunlar</h1>
+</div>
+
+<!-- ÜST MENÜ -->
+<div class="top-cards">
+
+    <div class="card active">
+        <h3>Folklor ve Oyunlar</h3>
+        <p>Geleneksel oyunlar ve halk kültürü.</p>
+        <a href="kultur_folklor.html"><button>Devamını Oku</button></a>
+    </div>
+
+    <div class="card">
+        <h3>Bayramlar</h3>
+        <p>Geleneksel kutlamalar ve ritüeller.</p>
+        <a href="kultur_bayramlar.html"><button>Devamını Oku</button></a>
+    </div>
+
+    <div class="card">
+        <h3>El Sanatları</h3>
+        <p>Dokuma ve üretim kültürü.</p>
+        <a href="kultur_sanat.html"><button>Devamını Oku</button></a>
+    </div>
+
+</div>
+
+<!-- METİN -->
+<div class="glass-box">
+
+<h3>Folklor ve Geleneksel Oyunlar</h3>
+<p>
+“Folklor ve edebi kaynaklar, Gagavuz ulusal oyunları hakkında bilgi verir: “Üç pelivan” masalı, çeşitli güç egzersizlerinde yarışan ‘Aaç kıran’, ‘Ayı kulak’, ‘Gürgen kıvradan’ adlı üç mitolojik kahramanı anlatır. Günümüzde, Gagavuzya'da bir dizi milli hareketli oyunun yanı sıra el becerisi ve zekaya dayalı oyunlar yeniden canlandırılmakta ve uygulanmaktadır: Milli güreş “Güreş”; “Beşka”, “Kaytuş”, “Ataklan” varyantları olan eski zar oyunu “Aşık”; satranca yakın olan eski oyun “Kuran”; at yarışı “Koşu”; eşek yarışı “Eşeklärlän yarışmak”; Pelivan”; el becerisi için tasarlanmış bir oyun olan ‘Pırıldak’; ve eski bir eğlence olan ‘Dönecek’ - bir araba tekerleği ve çeki demirinden yapılmış özel bir alete binmek ve diğerleri.” (Constantinova vd. 2020, s. 54)
+</p>
+
+<p>
+“Horu, geçmişte genellikle pazar günleri ve geçiş dönemi eğlencelerinde köy meydanında, merkezinde ya da kilisenin yakınında el ele veya kuşaktan, kemerden tutuşulup, daire oluşturularak soldan sağa doğru oynanan Gagavuz halk oyunlarından biridir. Aynı zamanda bu tarz daire oluşturarak oynanan oyunların da genel adıdır. Gagavuz kültüründe horunun ve diğer dans türlerinin de oynandığı meydan horu eri (yeri) olarak adlandırılmaktadır. Oyun Türkiye’de hora olarak bilinmekle birlikte, Batı Trakya Gümülcine ağzında da hora “el ele tutuşarak halka şeklinde oynanan bir çeşit oyun” anlamındadır. Romanya ve Moldova kültüründe de el ele tutuşulup veya eller yanındakinin omzuna atılarak ve daire oluşturularak soldan sağa doğru üç adım ileri, bir adım geri şeklinde oynanır. Bu oynanış şekilleri Gagavuzların düz horusu ile benzerdir. Bu bilgiler ışığında horu için Balkanların ortak kültürel dokularından biri olduğu söylenebilir.” (Cem, 2023, s. 254-255)
+</p>
+
+<p>
+Kazakistan’ın başkenti Astana’da 13-14 Eylül 2012 tarihleri arasında UNESCO ve ISESCO Kazakistan Millî Komisyonu ve TÜRKSOY ortaklığında “TÜRKSOY Üyesi Devletler UNESCO Milli Komisyonları 3. Toplantısı” düzenlenmiştir. TÜRKSOY Üyesi Devletler UNESCO Milli Komisyonları(2012) Toplantısında UNESCO İnsanlığın Somut Olmayan Kültürel Miras Listesi’ne yakın gelecekte kayıt amacıyla Gagavuz Yeri Özerk Bölgesi (Moldova) için “Nasreddin Hoca deyişleri, Horu-milli dansı, Hederlez bayramı, M’edji ve Fıçıcılık zanaatı” teklif edilmiştir.
+</p>
+
+<p>
+“Gagavuz Halkının Kulturası Hem Adetleri” adlı kitapta UNESCO Somut Olmayan Kültürel Miras Listesi’ne aday gösterilen “M edji(Meçi)” hakkında şu bilgiler yer almaktadır: “Meçi, Gagavuzcada karşılıklı yardım anlamına gelir. Meçi, komşuluk ilişkilerinin ve dayanışmanın önemli olduğu Gagauzlarda eski zamanlardan kalma bir gelenektir. Açlık zamanlarında Gagavuzlar bir araya gelir, birbirlerine yardım etmek için toplanırlardı. Bu gelenek, özellikle tarım işlerinde, ev yapımında ve diğer zor işlerde sıkça görülürdü. Eskiden herkes birlikte yaşarmış. Yaşam zor olduğundan, insanlar çeşitli işlere yönelirlermiş: çiftçilik, hayvancılık, besicilik gibi. Bu işleri Gagavuzlar hep birlikte yaparmış, birbirlerine yardım edermiş. Toprak sürerler, hayvanları güderlermiş. Evler beraberce yapılırmış. Köprüler, yollar, kuyular hep birlikte kazılırmış.” (Kopuşçu ve Paşalı, 2016,s.67)
+</p>
+
+<h3>Gagavuz Türkçesi</h3>
+<p>
+“Gagavuz Türkçesi, UNESCO’nun belirlediği “Tehlikedeki Dünya Dilleri” ailesine mensuptur ve Türkiye Türkçesine çok yakın bir lehçe konumundadır. Korunması ve yaşatılması için tedbir alınması kararlaştırılmıştır. Bu karar doğrultusunda Moldova’da Gagauzluk Cümne Birlii/ Gagavuzluk Halk Derneği önderliğinde 2016 yılında “Gagavuzların Kayıp Olan/Kaybolmaktaki Dilinin ve Kültürel Âdetlerinin Moldova’da Korunması” adıyla bir proje hazırlanmış, ABD Moldova Büyükelçiliği Kültürel Koruma Fonunun maddi desteğiyle hazırlanan üç ciltlik külliyat, dört dilde (Gagavuz Türkçesi, İngilizce, Romence ve Rusça) yayımlanmıştır. Gagavuz Türkçesi, Türkiye Türkçesi’ne en yakın lehçe özelliğine sahiptir. Arapça, Farsça kelimeler, tamlamalar yok denecek kadar azdır. Bazı harfler (h, y, ğ gibi) ya kullanılmaz ya da çok seyrek görülür. Türkiye Türkleri, Gagavuz Türkçesindeki metinleri kolaylıkla okuyup anlayabilirler.” (Tan, 2020, s.238,239)
+</p>
+
+</div>
+
+<!-- GALERİ -->
+<div class="gallery">
+    <img src="images/Resim1.png" onclick="openModal(this.src)">
+    <img src="images/Resim5.png" onclick="openModal(this.src)">
+    <img src="images/Resim6.png" onclick="openModal(this.src)">
+    <img src="images/Resim7.png" onclick="openModal(this.src)">
+    <img src="images/Resim8.png" onclick="openModal(this.src)">
+
+</div>
+
+<!-- ALT -->
+<div class="bottom-cards">
+
+    <div class="card">
+        <h3>Ana Sayfa</h3>
+        <p>Projenin genel özetine geri dön.</p>
+        <a href="index.html"><button>Devamını Oku</button></a>
+    </div>
+
+    <div class="card">
+        <h3>Galeri</h3>
+        <p> Tüm görselleri incele.</p>
+        <a href="galeri.html"><button>Devamını Gör</button></a>
+    </div>
+
+    <div class="card">
+        <h3>Coğrafya</h3>
+        <p>Bölgenin konumu ve özellikleri.</p>
+        <a href="cografya.html"><button>Devamını Oku</button></a>
+    </div>
+
+    <div class="card">
+        <h3>Tarih</h3>
+        <p>Gagavuz Türklerinin tarihsel süreci.</p>
+        <a href="tarih.html"><button>Devamını Oku</button></a>
+    </div>
+
+</div>
+
+</div>
+
+<!-- MODAL -->
+<div id="modal" class="modal" onclick="closeModal()">
+    <img id="modalImg">
+</div>
+
+<script>
+function openModal(src){
+    document.getElementById("modal").style.display="flex";
+    document.getElementById("modalImg").src=src;
+}
+
+function closeModal(){
+    document.getElementById("modal").style.display="none";
+}
+</script>
+
+</body>
+</html>

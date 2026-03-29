@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Bayramlar</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+
+<style>
+/* 4'LÜ GALERİ */
+.gallery{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin-top:40px;
+    flex-wrap:wrap; /* küçük ekranda taşarsa alta iner */
+}
+
+.gallery img{
+    width:180px;
+    height:130px;
+    object-fit:cover;
+    border-radius:12px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+.gallery{
+    margin-top:40px;
+    margin-bottom:60px; /* EKLE */
+}
+
+.gallery img{
+    box-shadow:0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* MODAL */
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.9);
+    justify-content:center;
+    align-items:center;
+    z-index:999;
+}
+
+.modal img{
+    max-width:85%;
+    max-height:85%;
+    border-radius:12px;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+    font-family:'Merriweather', serif;
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:white;
+}
+
+.content{
+    width:90%;
+    max-width:1100px;
+    margin:100px auto;
+}
+
+.page-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.page-title h1{
+    font-size:40px;
+}
+
+/* ÜST KARTLAR */
+.top-cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    margin-bottom:50px;
+}
+
+.card{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+    padding:30px;
+    border-radius:18px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+.card p{
+    margin-bottom:15px;
+}
+
+.card button{
+    padding:8px 18px;
+    border:none;
+    border-radius:20px;
+    background:#00aaff;
+    color:white;
+    cursor:pointer;
+}
+
+.card button:hover{
+    background:#0077aa;
+}
+
+/* AKTİF */
+.active{
+    border:2px solid #00aaff;
+}
+
+/* METİN */
+.glass-box{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+    padding:55px;
+    border-radius:20px;
+    line-height:1.9;
+    margin-bottom:60px;
+}
+
+.glass-box h3{
+    margin-top:25px;
+    margin-bottom:10px;
+    color:#00aaff;
+    border-left:3px solid #00aaff;
+    padding-left:10px;
+}
+
+.glass-box p{
+    margin-bottom:18px;
+    text-align:justify;
+}
+
+/* ALT */
+.bottom-cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:25px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="content">
+
+<div class="page-title">
+    <h1>Bayramlar ve Ritüeller</h1>
+</div>
+
+<!-- ÜST MENÜ -->
+<div class="top-cards">
+
+    <div class="card">
+        <h3>Folklor ve Oyunlar</h3>
+        <p>Geleneksel oyunlar.</p>
+        <a href="kultur_folklor.html">
+            <button>Devamını Oku</button>
+        </a>
+    </div>
+
+    <div class="card active">
+        <h3>Bayramlar</h3>
+        <p>Geleneksel kutlamalar.</p>
+        <a href="kultur_bayramlar.html">
+            <button>Devamını Oku</button>
+        </a>
+    </div>
+
+    <div class="card">
+        <h3>El Sanatları</h3>
+        <p>Dokuma ve üretim.</p>
+        <a href="kultur_sanat.html">
+            <button>Devamını Oku</button>
+        </a>
+    </div>
+
+</div>
+
+<!-- METİN -->
+<div class="glass-box">
+
+<h3>Colindat Geleneği</h3>
+<p>
+“Romanya ve Moldova Cumhuriyeti’nde her yıl Noel arifesinde köy meydanında toplanan erkekler çeşitli müzikler çalarak ev ev gezerler. Ev sahipleri gelen kişilere, ritüel olarak hediyeler veya para sunar. Şarkılar bereket ve iyi dilekler üzerinedir. “Colindat” olarak adlandırdıkları bu kutlamada yine benzer şekilde enstrümantal eşlik ve koreografi eşliğinde kostümlü olarak danslar sergilenmektedir. 2013 yılında “Colindat Erkek Grubu ve Noel Ritüeli”, Moldova’nın (Romanya ile paylaşılıyor) UNESCO’nun Somut Olmayan Kültürel Miras Listesinde yer almaktadır. Bu kültürel miras, sosyal kimliğin korunmasında ve bütünlüğün sağlanmasında önemli bir rol oynamaktadır.” (UNESCO, 2013). (Küçükali Uçankuş, Kızılırmak, 2023, s. 69)
+</p>
+
+<h3>Hederlez Bayramı</h3>
+<p>
+“Hederlez, eski bir halk yortusudur(bayramıdır). İlk otun ve ilk çiğin düştüğü bir bayramdır. Bu bayram hayvancılık işleri, özellikle de koyunculukla ilgilidir. Hederlez, Paskalya gibi büyük bir bayramdır. Çobanlar bu dönemde çiftçilerden koyunları otlatmak için alır ve çobanlar için törenler yapılır. Yıl iki döneme ayrılır; yaz ve kış. Bu ay, 6 Mayıs’a denk gelir. Bugünde kurban kesilir ya da ilk doğan erkek kuzu adanır. Ertesi gün adanan kuzunun bir boynuzuna yanan mum, diğer boynuzuna ise bir havlu bağlanır. “Bu dünyada senin olsun, öbür dünyada benim olsun denir.” Karşı taraf da “Allah kabul etsin.” der. Bayramdan önce feslen ekilir, bu da çeşitli hastalıklara karşı kullanılır. Bugün salıncakta sallanmak ve çekide çekilmek adettir. Erkekler sabahleyin kıra gidip ektiklerinin durumunu kontrol ederler. Kurban, komşulara ve yakın akrabalara dağıtılır. Çadır kasabalarında ve diğer köylerde at yarışları düzenlenir. Bugün, büyük Ayoyu(Aziz İlyas) Bayramı’dır. (Kopuşçu ve Paşalı, 2016, s.67)
+</p>
+
+<h3>Martenita Geleneği</h3>
+<p>
+“1 Mart ile ilgili kültürel uygulamalar 2017 yılında UNESCO mirasına dâhil edilmiştir. Martisor bayramının, Roma İmparatorluğu döneminde, Yeni Yıl’ın baharın ilk günü Mars ayında kutlandığı zaman ortaya çıktığı kabul edilir. O sadece savaş tanrısı değil, aynı zamanda bereket ve bitki örtüsünün de tanrısıydı. Bu ikilik martisorun, beyazın barış ve kırmızının savaş renklerinde fark edilir. Martisor, mart ayında giyilir ve ardından bir meyve ağacının dalları tarafından yakalanır. İnsanların evlerine bereket getireceğine inanılır. Martisor ağaca asılırken bir dilek dilenirse hemen yerine getirileceği söylenir.” Romanya Ulusal Kültürü, (t.y.)
+</p>
+
+</div>
+<!-- GALERİ -->
+<div class="gallery">
+    <img src="images/Resim11.png" onclick="openModal(this.src)">
+    <img src="images/Resim12.png" onclick="openModal(this.src)">
+    <img src="images/Resim13.png" onclick="openModal(this.src)">
+    <img src="images/Resim14.png" onclick="openModal(this.src)">
+
+</div>
+<!-- ALT -->
+<div class="bottom-cards">
+
+    <div class="card">
+        <h3>Ana Sayfa</h3>
+        <p>Projenin genel özetine geri dön.</p>
+        <a href="index.html"><button>Devamını Oku</button></a>
+    </div>
+
+    <div class="card">
+        <h3>Galeri</h3>
+        <p>Haritalar ve görselleri incele.</p>
+        <a href="galeri.html"><button>Devamını Gör</button></a>
+    </div>
+
+    <div class="card">
+        <h3>Coğrafya</h3>
+        <p>Bölgenin konumu ve özellikleri.</p>
+        <a href="cografya.html"><button>Devamını Oku</button></a>
+    </div>
+
+    <div class="card">
+        <h3>Tarih</h3>
+        <p>Gagavuz Türklerinin tarihsel süreci.</p>
+        <a href="tarih.html"><button>Devamını Oku</button></a>
+    </div>
+
+</div>
+
+</div>
+
+
+<div id="modal" class="modal" onclick="closeModal()">
+    <img id="modalImg">
+</div>
+
+<script>
+function openModal(src){
+    document.getElementById("modal").style.display="flex";
+    document.getElementById("modalImg").src=src;
+}
+
+function closeModal(){
+    document.getElementById("modal").style.display="none";
+}
+</script>
+
+</body>
+</html>

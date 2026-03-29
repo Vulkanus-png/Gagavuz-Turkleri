@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Gagavuz Türkleri - Coğrafya</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* BODY */
+body{
+    font-family:'Merriweather', serif;
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:white;
+}
+
+/* ANA CONTAINER */
+.content{
+    width:90%;
+    max-width:1100px;
+    margin:100px auto 80px auto;
+}
+
+/* BAŞLIK */
+.page-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.page-title h1{
+    font-size:40px;
+}
+
+/* CAM KUTU */
+.glass-box{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+    padding:45px;
+    border-radius:18px;
+    margin-bottom:40px;
+    line-height:1.9;
+}
+
+/* HARİTA GALERİ */
+.map-gallery{
+    display:flex;
+    flex-wrap:wrap;
+    gap:30px;
+    justify-content:center;
+    margin:50px 0;
+}
+
+.map-gallery img{
+    width:250px;
+    height:180px;
+    object-fit:cover;
+    border-radius:14px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.map-gallery img:hover{
+    transform:scale(1.05);
+}
+
+/* MODAL */
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.9);
+    justify-content:center;
+    align-items:center;
+    z-index:1000;
+}
+
+.modal img{
+    max-width:85%;
+    max-height:85%;
+    border-radius:16px;
+}
+
+.modal:active{
+    display:none;
+}
+
+/* ALT NAV */
+.nav-cards{
+    margin-top:80px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:30px;
+}
+
+.nav-card{
+    background:rgba(255,255,255,0.08);
+    padding:35px;
+    border-radius:18px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.nav-card:hover{
+    transform:translateY(-6px);
+}
+
+.nav-card h4{margin-bottom:15px;}
+
+.nav-card p{margin-bottom:20px;}
+
+.nav-card button{
+    padding:8px 22px;
+    border:none;
+    border-radius:20px;
+    background:#00aaff;
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.nav-card button:hover{
+    background:#0077aa;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="content">
+
+<div class="page-title">
+<h1>Coğrafya</h1>
+</div>
+
+<div class="glass-box">
+<p>
+Doğu Avrupa’da yer alan ve denize kıyısı olmayan Moldova’nın batısında Romanya, kuzey, güney ve doğusunda Ukrayna bulunmaktadır. Moldova’da Moldovaca(resmi dil), Rusça ve Gagavuzca konuşulmaktadır. Parlamenter Cumhuriyet sistemiyle yönetilen Moldova’nın başkenti Chisinau(Kişinev)’dir. Moldova Cumhuriyeti, 2023 yılında yapılan nüfus sayımına göre 2,49 milyon nüfusa sahiptir. Nüfusun % 78,2'si Moldovalı, % 8,4'si Ukraynalı, %5,8'i Rus, % 4,4’ü Gagavuz, % 1,9’u ise Bulgar ve % 1,3’ünün diğer milletlerden oluştuğu görülmektedir. Moldova nüfusunun % 98’i Ortodoks Hristiyan, % 1,5’i Yahudi ve % 0,5’’i diğer etnik unsurlardan oluşmaktadır. (T.C. Ticaret Bakanlığı, 2004)
+</p>
+</div>
+
+<!-- HARİTALAR -->
+<div class="map-gallery">
+    <img src="images/moldova-map.jpg" alt="Moldova Haritası" onclick="openModal(this.src)">
+    <img src="images/gagauzya-map.jpg" alt="Gagauzya Haritası" onclick="openModal(this.src)">
+</div>
+
+<!-- MODAL -->
+<div id="myModal" class="modal" onclick="closeModal()">
+    <img id="modalImg">
+</div>
+
+<!-- ALT NAV -->
+<div class="nav-cards">
+
+    <div class="nav-card">
+        <h4>Tarih</h4>
+        <p>Tarihsel gelişimi inceleyin.</p>
+        <a href="tarih.html">
+            <button>Devamını Oku</button>
+        </a>
+    </div>
+
+        <div class="nav-card">
+            <h3>Kültür</h4>
+            <p>Dil, gelenekler ve kültürel özellikler.</p>
+            <a href="kulturel_karsilastirma.html">
+                <button>Devamını Oku</button>
+            </a>
+        </div>
+
+    <div class="nav-card">
+        <h4>Galeri</h4>
+        <p>Haritalar ve kültürel görselleri görüntüleyin.</p>
+        <a href="galeri.html">
+            <button>Galeriyi Gör</button>
+        </a>
+    </div>
+
+    <div class="nav-card">
+        <h4>Ana Sayfa</h4>
+        <p>Proje özetine geri dönün.</p>
+        <a href="index.html">
+            <button>Devamını Oku</button>
+        </a>
+    </div>
+
+</div>
+
+<script>
+function openModal(src){
+    const modal=document.getElementById("myModal");
+    const img=document.getElementById("modalImg");
+    modal.style.display="flex";
+    img.src=src;
+}
+
+function closeModal(){
+    document.getElementById("myModal").style.display="none";
+}
+</script>
+
+</body>
+</html>

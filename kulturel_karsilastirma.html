@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Gagavuz – Anadolu Kültürel Karşılaştırması</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+
+<style>
+.compare-table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:30px;
+    border-radius:12px;
+    overflow:hidden;
+    font-size:15px;
+}
+
+.compare-table th{
+    background:linear-gradient(90deg,#00aaff,#0077aa);
+    color:white;
+    padding:14px;
+}
+
+.compare-table td{
+    padding:12px;
+    text-align:center;
+}
+
+.compare-table tr:nth-child(even){
+    background:rgba(255,255,255,0.05);
+}
+
+.compare-table tr:hover{
+    background:rgba(0,170,255,0.2);
+    transform:scale(1.01);
+    transition:0.2s;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+.top-cards{
+    max-width:800px;
+    margin:0 auto 40px auto;
+}
+
+.bottom-cards{
+    margin-top:20px;
+}
+
+.card{
+    overflow:hidden;
+}
+
+body{
+    font-family:'Merriweather', serif;
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:white;
+}
+
+.content{
+    width:90%;
+    max-width:1100px;
+    margin:100px auto;
+}
+
+.page-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.page-title h1{
+    font-size:40px;
+}
+
+.glass-box{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+    padding:50px;
+    border-radius:20px;
+    line-height:1.9;
+    margin-bottom:60px;
+}
+
+.glass-box p{
+    margin-bottom:20px;
+    text-align:justify;
+}
+
+/* KARTLAR */
+.card{
+    position:relative;
+    z-index:1;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:40px;
+}
+
+.card{
+    will-change: transform;
+}
+
+.card{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+    padding:30px;
+    border-radius:18px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-4px);
+z-index:10;
+}
+
+.card h3{
+    margin-bottom:12px;
+}
+
+.card p{
+    margin-bottom:18px;
+}
+
+.card button{
+    padding:8px 18px;
+    border:none;
+    border-radius:20px;
+    background:#00aaff;
+    color:white;
+    cursor:pointer;
+}
+
+.card button:hover{
+    background:#0077aa;
+}
+
+.card{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    height:200px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="content">
+
+<div class="page-title">
+    <h1>Gagavuz – Anadolu Kültürel Karşılaştırması</h1>
+</div>
+
+<div class="glass-box">
+    <p>
+        Gagavuz kültürü ile Anadolu Türk kültürü arasında birçok benzerlik bulunmaktadır.
+        Gelenekler, bayramlar, halk oyunları ve günlük yaşam pratikleri incelendiğinde
+        ortak kültürel unsurların varlığı dikkat çekmektedir.
+    </p>
+
+    <p>
+        Bu sayfada Gagavuz kültürünün farklı alanları başlıklar halinde
+        incelenmiş ve her biri ayrı bölümlerde detaylandırılmıştır.
+    </p>
+
+<table class="compare-table">
+    <tr>
+        <th>Gagavuz</th>
+        <th>Anadolu</th>
+    </tr>
+
+    <tr><td>İlk Yaz Yortusu</td><td>Nevruz</td></tr>
+    <tr><td>Hederlez</td><td>Hıdırellez</td></tr>
+    <tr><td>Colindat Noel Ritüeli</td><td>Trabzon Kalandar Geleneği</td></tr>
+    <tr><td>Horu Milli Dansı</td><td>Hora Halk Oyunu</td></tr>
+    <tr><td>M'edji (Meçi)</td><td>İmece</td></tr>
+    <tr><td>Nasreddin Hoca Deyişleri</td><td>Nasreddin Hoca Fıkraları</td></tr>
+    <tr><td>Oyunlar (Güreş, pelivan, koşu)</td><td>Oyunlar (Güreş, pehlivan, at yarışı)</td></tr>
+    <tr><td>Yemekler (Kaurma, gözlema, laaana sarması, pide, çörek)</td><td>Yemekler (Kavurma, gözleme, lahana sarması, pide, çörek)</td></tr>
+    <tr><td>Kıyafetler (ruba, gölmek, fistan, mintan, yaamurluk)</td><td>Kıyafetler (giysi, gömlek, fistan, mintan, yağmurluk)</td></tr>
+</table>
+
+    </div>
+
+<div class="cards top-cards">
+
+    <div class="card">
+        <h3>Folklor ve Oyunlar</h3>
+        <p>Geleneksel oyunlar ve halk kültürüne dair unsurlar.</p>
+        <a href="kultur_folklor.html">
+            <button>Devamını Oku</button>
+        </a>
+    </div>
+
+    <div class="card">
+        <h3>Bayramlar</h3>
+        <p>Gagavuzlara özgü kutlamalar ve dini ritüeller.</p>
+        <a href="kultur_bayramlar.html">
+            <button>Devamını Oku</button>
+        </a>
+    </div>
+
+    <div class="card">
+        <h3>El Sanatları</h3>
+        <p>Geleneksel üretim, dokuma ve el işçiligi.</p>
+        <a href="kultur_sanat.html">
+            <button>Devamını Oku</button>
+        </a>
+    </div>
+
+</div>
+
+<div class="cards bottom-cards">
+
+    <div class="card">
+        <h3>Ana Sayfa</h3>
+        <p>Projenin genel özetine geri dön.</p>
+        <a href="index.html"><button>Devamını Oku</button></a>
+    </div>
+
+    <div class="card">
+        <h3>Galeri</h3>
+        <p>Tüm görselleri incele.</p>
+        <a href="galeri.html"><button>Devamını Gör</button></a>
+    </div>
+
+    <div class="card">
+        <h3>Coğrafya</h3>
+        <p>Bölgenin konumu ve özellikleri.</p>
+        <a href="cografya.html"><button>Devamını Oku</button></a>
+    </div>
+
+    <div class="card">
+        <h3>Tarih</h3>
+        <p>Gagavuz Türklerinin tarihsel süreci.</p>
+        <a href="tarih.html"><button>Devamını Oku</button></a>
+    </div>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
